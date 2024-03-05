@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import type { ChaussureSvg } from "@/types";
+import type { Basket } from "@/types";
 import { ref } from "vue";
 import SvgProfil from "../components/BasketProfil.vue";
 import SvgDessus from "../components/BasketDessus.vue";
 
-const chaussure = ref<ChaussureSvg>({});
+const props = defineProps<{
+    data?: Basket;
+    id?: string;
+}>();
+
+const chaussure = ref<Basket>(props.data ?? {});
 </script>
 
 
