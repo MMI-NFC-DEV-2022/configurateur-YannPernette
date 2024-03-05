@@ -24,3 +24,19 @@ export const colors = {
   "#800000": "Marron",
   "#808000": "Olive",
 };
+
+
+export const materiaux = [
+  {
+    value: "https://images.unsplash.com/photo-1564842505181-8862a3b9b173?q=80&w=1768&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Cuir",
+  },
+  {
+    value: "https://images.unsplash.com/photo-1616627502968-858f7b39f574?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Tissu",
+  },
+  {
+    value: "https://images.unsplash.com/photo-1592823563234-622a0f2f6ec2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    label: "Synthétique",
+  },
+];

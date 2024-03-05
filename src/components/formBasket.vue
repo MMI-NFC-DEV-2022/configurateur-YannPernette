@@ -17,15 +17,18 @@ const chaussure = ref<Basket>(props.data ?? {});
 
 
 <template>
-    <div class="p-2">
-        <ul class="flex gap-1 underline">
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#dessus">Dessus</a></li>
-        </ul>
+    <div class="pl-60">
         <div class="carousel w-64">
             <SvgProfil class="carousel-item w-64" v-bind="chaussure" id="profil" />
             <SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus" />
         </div>
+        <ul class="flex gap-40 underline">
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#dessus">Dessus</a></li>
+        </ul>
+    </div>
+
+    <div class="p-8 mt-10">
         <FormKit type="form" v-model="chaussure">
 
             <FormKit name="semelle" label="Semelle" value="#FFFFFF" type="radio" :options="colors" :sections-schema="{
