@@ -1,13 +1,10 @@
-export interface SchemaOffreMaison {
-    id?: number; 
-    nomMaison: string;
-    prix: number;
-    favori: boolean;
-    image: string;
-    nbrChambres: number;
-    nbrSDB: number;
-    adresse: string;
-    surface: string;
-    id_Agent: number;
-    id_Quartier: number;
-  }
+export interface ChaussureSvg {
+  semelle?: string;
+  empeigne?: string;
+  pointe?: string;
+  oeillet?: string;
+  bande?: string;
+  languette?: string;
+  lacet?: string;
+  trimestre?: string;
+}
