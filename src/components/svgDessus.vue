@@ -1,3 +1,21 @@
+<script setup lang="ts">
+import type { ChaussureSvg } from "@/types-svg";
+
+withDefaults(defineProps<ChaussureSvg>(), {
+    semelle: "white",
+    empeigne: "white",
+    pointe: "white",
+    oeillet: "white",
+    bande: "white",
+    languette: "white",
+    lacet: "white",
+    trimestre: "white",
+});
+</script>
+
+
+
+
 <template>
     <svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 379.82 140.76">
         <defs></defs>
@@ -37,7 +55,7 @@
         <rect x="141" y="98.31" width="86.7" height="6.7" transform="translate(19.74 222.56) rotate(-72.83)"
             fill="white" stroke="black" stroke-width="3" stroke-miterlimit="10" class="lacet"></rect>
         <path d="M114,50.56s44,48.2-2.6,89.4c0,0-80.4-10.3-79.6-44.7C32.61,58.36,114,50.56,114,50.56Z"
-            transform="translate(-13.07 -25.23)" fill="white" stroke="black" stroke-width="3" stroke-miterlimit="10"
+            transform="translate(-13.07 -25.23)" :fill="semelle" stroke="black" stroke-width="3" stroke-miterlimit="10"
             class="semelle"></path>
         <path
             d="M273.05,67.2s16.43-5.64-9.49-37l15.85-2.78S339,23.85,371.34,47.33c0,0,22.31,16.45,20,42.93s-30,46.2-30,46.2-25.12,19.31-66.49,24.83l-31.26,3s24.17-10.76,11-36.68H280v7.65h9l-.2-8.7s4.93-.3,5.89,1.74,1.52,2.16-.07,8.44-4.38,16-1.47,17.27l37-16.91s39.56-13,45.15-32.11.51-25.39.51-25.39a27.79,27.79,0,0,0-12.38-13.07C354.23,61.68,309.87,43,309.87,43s-24.78-9.69-25.36-5.43c0,0,13.79,11.41,14.47,22.12a14,14,0,0,1-.77,8.38s-.21,1.73-7.21,1l-2-.18V58.46h-9l0,9.46Z"
