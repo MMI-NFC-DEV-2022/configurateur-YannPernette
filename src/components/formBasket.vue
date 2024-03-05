@@ -28,7 +28,7 @@ const chaussure = ref<Basket>(props.data ?? {});
         </div>
         <FormKit type="form" v-model="chaussure">
             <FormKit name="semelle" label="semelle" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="select" :options="colors" />
+            <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="radio" :options="colors" />
             <FormKit name="pointe" label="pointe" value="#FFFFFF" type="select" :options="colors" />
             <FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="select" :options="colors" />
             <FormKit name="bande" label="bande" value="#FFFFFF" type="select" :options="colors" />
