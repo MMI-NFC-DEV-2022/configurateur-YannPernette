@@ -15,7 +15,7 @@ const chaussure = ref<ChaussureSvg>({});
             <li><a href="#profil">Profil</a></li>
             <li><a href="#dessus">Dessus</a></li>
         </ul>
-        <div class="carousel w-64 mb-40">
+        <div class="carousel w-64">
             <SvgProfil class="carousel-item w-64" v-bind="chaussure" id="profil" />
             <SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus" />
         </div>
