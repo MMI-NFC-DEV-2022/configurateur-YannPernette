@@ -27,14 +27,68 @@ const chaussure = ref<Basket>(props.data ?? {});
             <SvgDessus class="carousel-item w-64" v-bind="chaussure" id="dessus" />
         </div>
         <FormKit type="form" v-model="chaussure">
-            <FormKit name="semelle" label="semelle" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="radio" :options="colors" />
-            <FormKit name="pointe" label="pointe" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="bande" label="bande" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="languette" label="languette" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="lacet" label="lacet" value="#FFFFFF" type="select" :options="colors" />
-            <FormKit name="trimestre" label="trimestre" value="#FFFFFF" type="select" :options="colors" />
+            <FormKit name="semelle" label="semelle" value="#FFFFFF" type="radio" :options="colors">
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="empeigne" label="empeigne" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="pointe" label="pointe" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="oeillet" label="oeillet" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="bande" label="bande" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="languette" label="languette" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="lacet" label="lacet" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
+
+            <FormKit name="trimestre" label="trimestre" value="#FFFFFF" type="radio" :options="colors">
+
+                <template #label="context">
+                    <div class="h-6 w-6 rounded-full" :style="{ backgroundColor: context.option.value }"></div>
+                    <span>{{ context.option.label }}</span>
+                </template>
+            </FormKit>
         </FormKit>
     </div>
 </template>
