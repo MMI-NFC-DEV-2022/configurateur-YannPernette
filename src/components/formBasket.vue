@@ -4,7 +4,7 @@ import { ref } from "vue";
 import SvgProfil from "../components/BasketProfil.vue";
 import SvgDessus from "../components/BasketDessus.vue";
 import { couleursNoms } from "@/types-images";
-import { colors } from "@/types";
+import { colors, materiaux } from "@/types";
 
 const props = defineProps<{
     data?: Basket;
@@ -30,6 +30,18 @@ const chaussure = ref<Basket>(props.data ?? {});
 
     <div class="p-8 mt-10">
         <FormKit type="form" v-model="chaussure">
+
+            <FormKit name="materiaux" label="Matériaux" value="#FFFFFF" type="radio" :options="materiaux" :sections-schema="{
+                inner: { $el: null },
+                decorator: { $el: null },
+            }" input-class="peer sr-only" options-class="flex gap-4">
+
+                <template #label="context">
+                    <div class="mt-2 mb-5 h-10 w-10 rounded-full border-[3px] peer-checked:border-cyan-300"
+                        :style="{ backgroundImage: `url(${context.option.value})` }"></div>
+                    <span class="sr-only">{{ context.option.label }}</span>
+                </template>
+            </FormKit>
 
             <FormKit name="semelle" label="Semelle" value="#FFFFFF" type="radio" :options="colors" :sections-schema="{
                 inner: { $el: null },
